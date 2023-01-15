@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #8047af, #5344d6);
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.span_2 {
+  grid-column: span 2;
+}
+
+.display {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+button {
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.75);
+  outline: none;
+  font-size: 2.5rem;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.display > .previous_display {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.display > .current_display {
+  font-size: 2.5rem;
+  color: white;
+}
